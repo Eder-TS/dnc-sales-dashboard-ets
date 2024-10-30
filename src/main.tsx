@@ -6,11 +6,10 @@ import { ThemeProvider } from 'styled-components'
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
-
     {/* Renderização condicional com temas. */}
     <ThemeProvider theme={lightTheme}>
       <GlobalStyle />
       <App />
     </ThemeProvider>
-  </StrictMode>,
+  </StrictMode>
 )
