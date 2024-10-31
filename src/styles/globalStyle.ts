@@ -10,7 +10,7 @@ export const GlobalStyle = createGlobalStyle<{ theme?: DefaultTheme }>`
         font-family: "Inter", serif;
     }
 
-    h1, h2, p, ul, ui {
+    h1, h2, p, ul, ui,figure {
         margin: 0;
         padding: 0;
     }
