@@ -1,3 +1,4 @@
+export { default as Header } from './Header'
 export { default as FormComponent } from './FormComponent'
 export * from './BannerImage'
 export * from './StyledButton'
