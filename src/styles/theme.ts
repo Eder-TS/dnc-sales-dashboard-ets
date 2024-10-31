@@ -8,7 +8,7 @@ export const lightTheme: Theme = {
   appSkeletonFrom: '#EEE',
   appSkeletonTo: '#CCC',
   button: {
-    aler: '#E80000',
+    alert: '#E80000',
     alertColor: '#FFF',
     alertHover: '#D80000',
     disabled: '#CCC',
@@ -18,7 +18,7 @@ export const lightTheme: Theme = {
     primaryHover: '#0061DE',
   },
   card: {
-    aler: '#E80000',
+    alert: '#E80000',
     background: '#FFF',
     border: '#E0E0E0',
     sucess: '#008000',
@@ -48,7 +48,7 @@ export const darkTheme: Theme = {
   appSkeletonFrom: '#060B26',
   appSkeletonTo: '#21497D',
   button: {
-    aler: '#E80000',
+    alert: '#E80000',
     alertColor: '#FFF',
     alertHover: '#D80000',
     disabled: '#313649',
@@ -58,7 +58,7 @@ export const darkTheme: Theme = {
     primaryHover: '#0061DE',
   },
   card: {
-    aler: '#E80000',
+    alert: '#E80000',
     background: '#0F1535',
     border: '#21497D',
     sucess: '#008000',

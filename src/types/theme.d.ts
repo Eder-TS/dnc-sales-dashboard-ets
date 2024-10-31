@@ -6,7 +6,7 @@ export interface Theme {
   appSkeletonFrom: string
   appSkeletonTo: string
   button: {
-    aler: string
+    alert: string
     alertColor: string
     alertHover: string
     disabled: string
@@ -16,7 +16,7 @@ export interface Theme {
     primaryHover: string
   }
   card: {
-    aler: string
+    alert: string
     background: string
     border: string
     sucess: string
