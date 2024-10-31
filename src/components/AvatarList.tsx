@@ -1,7 +1,6 @@
 import { Avatar, Box } from '@mui/material'
 import { pxToRem } from '@/utils'
 import { StyledH2, StyledSpan } from './Typographies'
-import { Logo } from './Logo'
 import { AvatarsListProps } from '@/types'
 
 function AvatarList(props: AvatarsListProps) {
@@ -13,7 +12,7 @@ function AvatarList(props: AvatarsListProps) {
             alignItems: 'center',
             display: 'flex',
             padding: `${pxToRem(12)} 0`,
-            key: { index },
+            key: { index }
           }}
         >
           <Box>
