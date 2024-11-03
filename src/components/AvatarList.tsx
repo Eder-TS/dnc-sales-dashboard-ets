@@ -12,7 +12,7 @@ function AvatarList(props: AvatarsListProps) {
             alignItems: 'center',
             display: 'flex',
             padding: `${pxToRem(12)} 0`,
-            key: { index }
+            key: { index },
           }}
         >
           <Box>
@@ -22,7 +22,7 @@ function AvatarList(props: AvatarsListProps) {
               sx={{
                 width: pxToRem(48),
                 height: pxToRem(48),
-                marginRight: pxToRem(16)
+                marginRight: pxToRem(16),
               }}
             />
           </Box>
