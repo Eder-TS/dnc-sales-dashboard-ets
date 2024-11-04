@@ -1,15 +1,14 @@
 import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
 import App from './App.tsx'
-import { lightTheme, GlobalStyle } from './styles/'
-import { ThemeProvider } from 'styled-components'
+import { GlobalStyle } from './styles/'
+import { AppThemeProvider } from './contexts/AppThemeContext.tsx'
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
-    {/* Renderização condicional com temas. */}
-    <ThemeProvider theme={lightTheme}>
+    <AppThemeProvider>
       <GlobalStyle />
       <App />
-    </ThemeProvider>
+    </AppThemeProvider>
   </StrictMode>
 )
