@@ -9,7 +9,7 @@ function Profile() {
     <>
       <Header />
       <CardComponent>
-        <StyledButton className='primary' onClick={themeContext?.toggleTheme}>
+        <StyledButton className="primary" onClick={themeContext?.toggleTheme}>
           Trocar para tema{' '}
           {themeContext?.appTheme === 'light' ? 'escuro.' : 'claro.'}
         </StyledButton>
