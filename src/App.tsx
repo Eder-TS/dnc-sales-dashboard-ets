@@ -30,7 +30,6 @@ function App() {
           <Route path="/leads" element={<Leads />} />
           <Route path="/perfil" element={<Profile />} />
         </Route>
-        
       </Routes>
     </Router>
   )
