@@ -21,7 +21,7 @@ function Profile() {
           </Grid>
           <Grid item xs={12} sm={6}>
             <CardComponent>
-              <StyledH2 className='mb-1'>Definições de conta</StyledH2>
+              <StyledH2 className="mb-1">Definições de conta</StyledH2>
               <StyledButton
                 className="primary mb-1"
                 onClick={themeContext?.toggleTheme}
@@ -29,7 +29,7 @@ function Profile() {
                 Trocar para tema{' '}
                 {themeContext?.appTheme === 'light' ? 'escuro.' : 'claro.'}
               </StyledButton>
-              <StyledButton className='alert' onClick={logout}>
+              <StyledButton className="alert" onClick={logout}>
                 Logout
               </StyledButton>
             </CardComponent>
