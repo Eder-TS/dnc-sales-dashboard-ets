@@ -38,7 +38,7 @@ function Registration() {
                 inputs={[
                   { type: 'text', placeholder: 'Nome completo' },
                   { type: 'email', placeholder: 'Email' },
-                  { type: 'number', placeholder: 'Telefone' },
+                  { type: 'tel', placeholder: 'Telefone' },
                 ]}
                 buttons={[
                   { className: 'primary', type: 'submit', children: 'Próximo' },
