@@ -2,9 +2,10 @@ import js from '@eslint/js'
 import globals from 'globals'
 import reactHooks from 'eslint-plugin-react-hooks'
 import reactRefresh from 'eslint-plugin-react-refresh'
+import eslintConfigPrettier from 'eslint-config-prettier'
 import tseslint from 'typescript-eslint'
 
-const eslintPluginPrettierRecommended = require('eslint-plugin-prettier/recommended')
+// const eslintPluginPrettierRecommended = require('eslint-plugin-prettier/recommended')
 
 export default tseslint.config(
   { ignores: ['dist'] },
@@ -12,7 +13,7 @@ export default tseslint.config(
     extends: [
       js.configs.recommended,
       ...tseslint.configs.recommended,
-      eslintPluginPrettierRecommended,
+      // eslintPluginPrettierRecommended,
     ],
     files: ['**/*.{ts,tsx}'],
     languageOptions: {
@@ -30,5 +31,6 @@ export default tseslint.config(
         { allowConstantExport: true },
       ],
     },
-  }
+  },
+  eslintConfigPrettier
 )
