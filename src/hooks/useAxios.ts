@@ -3,7 +3,7 @@ import axios, { AxiosRequestConfig } from 'axios'
 import Cookies from 'js-cookie'
 
 const axiosInstance = axios.create({
-  baseURL: `${import.meta.env.VITE_API_BASE_URL}/`,
+  baseURL: `${import.meta.env.VITE_API_BASE_URL}`,
 })
 
 export const usePost = <T, P>(endpoint: string) => {

@@ -114,8 +114,6 @@ function Profile() {
     }
   }
 
-  }
-
   return (
     <>
       <Header />
@@ -155,7 +153,7 @@ function Profile() {
                           className: 'alert',
                           type: 'button',
                           disabled: profileDeleteLoading,
-                          children: profileDeleteLoding ? 'Aguarde...' : 'Excluir minha conta.',
+                          children: profileDeleteLoading ? 'Aguarde...' : 'Excluir minha conta.',
                           onClick: handleDelete,
                         },
                       ]} 
