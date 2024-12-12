@@ -1,3 +1,6 @@
+import { Link } from 'react-router-dom'
+
+// COMPONENTS
 import {
   Header,
   CardComponent,
@@ -53,7 +56,7 @@ function Home() {
   return (
     <>
       <Header />
-      <Container className='mb-2' maxWidth="lg">
+      <Container className="mb-2" maxWidth="lg">
         <Grid container spacing={4}>
           {!highlightsError && (
             <>
@@ -112,13 +115,13 @@ function Home() {
                   }
                 >
                   {!highlightsLoading && highlightsData && (
-                    <>
+                    <Link to="/leads">
                       <StyledH2 className="mb-1">Leads contactados</StyledH2>
                       <StyledH3 className="mb-1" size={40} lineheight={40}>
                         {highlightsData[2].value}
                       </StyledH3>
                       <StyledSpan>{highlightsData[2].subtitle}</StyledSpan>
-                    </>
+                    </Link>
                   )}
                 </CardComponent>
               </Grid>
@@ -179,38 +182,36 @@ function Home() {
         <Grid item xs={12} md={5}>
           {!newsError && (
             <CardComponent
-            className={
-              newsLoading
-                ? 'skeleton-loading skeleton-loading-mh-2'
-                : ''
-            }
-          >
-            {
-              !newsLoading && newsData && (
+              className={
+                newsLoading ? 'skeleton-loading skeleton-loading-mh-2' : ''
+              }
+            >
+              {!newsLoading && newsData && (
                 <>
                   <StyledH2 className="mb-1">Notícias relevantes</StyledH2>
-            <CustomTable
-              headers={['Título', 'Horário']}
-              rows={newsData.map((news) => [
-                <a className='ellipsis ellipsis-sm' href={news.link} target='blank'>
-                  {news.title}
-                </a>
-              ])}
-            />
+                  <CustomTable
+                    headers={['Título', 'Horário']}
+                    rows={newsData.map((news) => [
+                      <a
+                        className="ellipsis ellipsis-sm"
+                        href={news.link}
+                        target="blank"
+                      >
+                        {news.title}
+                      </a>,
+                    ])}
+                  />
                 </>
-              )
-            }
-          </CardComponent>
+              )}
+            </CardComponent>
           )}
         </Grid>
 
         <Grid item xs={12} md={7}>
-        {!salesYearError && (
+          {!salesYearError && (
             <CardComponent
               className={
-                salesYearLoading
-                  ? 'skeleton-loading skeleton-loading-mh-2'
-                  : ''
+                salesYearLoading ? 'skeleton-loading skeleton-loading-mh-2' : ''
               }
             >
               {!salesYearLoading && salesYearData && (
