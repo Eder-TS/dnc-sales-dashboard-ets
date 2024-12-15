@@ -1,3 +1,6 @@
+import { Link } from 'react-router-dom'
+
+// COMPONENTS
 import {
   Header,
   CardComponent,
@@ -67,7 +70,7 @@ function Home() {
                 >
                   {!highlightsLoading && highlightsData && (
                     <>
-                      <StyledH2 className="mb-1">
+                      <StyledH2 className="mb-1" id="total-sales">
                         Total de vendas do mês
                       </StyledH2>
                       <StyledH3 size={40} lineheight={40}>
@@ -112,13 +115,13 @@ function Home() {
                   }
                 >
                   {!highlightsLoading && highlightsData && (
-                    <>
-                      <StyledH2 className="mb-1">Leads contactados</StyledH2>
+                    <Link to="/leads">
+                      <StyledH2 className="mb-1" id="total-leads">Leads contactados</StyledH2>
                       <StyledH3 className="mb-1" size={40} lineheight={40}>
                         {highlightsData[2].value}
                       </StyledH3>
                       <StyledSpan>{highlightsData[2].subtitle}</StyledSpan>
-                    </>
+                    </Link>
                   )}
                 </CardComponent>
               </Grid>
@@ -137,7 +140,7 @@ function Home() {
             >
               {!salesMonthLoading && salesMonthData && (
                 <>
-                  <StyledH2 className="mb-1">Valor de vendas no mês</StyledH2>
+                  <StyledH2 className="mb-1" id="month-sales-chart">Valor de vendas no mês</StyledH2>
                   <CustomChart
                     labels={salesMonthData.labels.map((label) => label)}
                     data={salesMonthData.data.map((data) => data)}
@@ -160,7 +163,7 @@ function Home() {
             >
               {!salesStarsLoading && salesStarsData && (
                 <>
-                  <StyledH2 className="mb-1">
+                  <StyledH2 className="mb-1" id="sales-stars">
                     Maiores venderores do mês
                   </StyledH2>
                   <AvatarList
@@ -185,7 +188,8 @@ function Home() {
             >
               {!newsLoading && newsData && (
                 <>
-                  <StyledH2 className="mb-1">Notícias relevantes</StyledH2>
+                  <StyledH2 className="mb-1" id="news">Notícias relevantes</StyledH2>
+
                   <CustomTable
                     headers={['Título', 'Horário']}
                     rows={newsData.map((news) => [
@@ -213,7 +217,7 @@ function Home() {
             >
               {!salesYearLoading && salesYearData && (
                 <>
-                  <StyledH2 className="mb-1">Valor de vendas por mês</StyledH2>
+                  <StyledH2 className="mb-1" id="year-sales-chart">Valor de vendas por mês</StyledH2>
                   <CustomChart
                     labels={salesYearData.labels.map((label) => label)}
                     data={salesYearData.data.map((data) => data)}
