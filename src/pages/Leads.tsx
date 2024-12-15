@@ -47,7 +47,7 @@ function Leads() {
   const { formValues, formValid, handleChange } = useFormValidation(inputs)
 
   const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault
+    e.preventDefault()
     await createLeadsPostData({
       name: String(formValues[0]),
       email: String(formValues[1]),
@@ -109,14 +109,14 @@ function Leads() {
           <Grid item xs={12} sm={7}>
             <CardComponent
               className={
-                leadsLoading
-                  ? 'skeleton-loading skeleton-loading-mh-2'
-                  : ''
+                leadsLoading ? 'skeleton-loading skeleton-loading-mh-2' : ''
               }
             >
               {!leadsError && !leadsLoading && (
                 <>
-                  <StyledH2 className="mb-1" id="leads-title">Meus leads</StyledH2>
+                  <StyledH2 className="mb-1" id="leads-title">
+                    Meus leads
+                  </StyledH2>
                   {leadsData?.length ? (
                     <CustomTable
                       headers={['Nome', 'Email', 'Telefone', '']}

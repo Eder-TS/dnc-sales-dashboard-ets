@@ -109,6 +109,7 @@ export const usePut = <T>(endpoint: string) => {
       })
 
       setData(response.data)
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
     } catch (e: any) {
       setError(e.response.status ?? 500)
     } finally {
@@ -139,6 +140,7 @@ export const useDelete = <T>(endpoint: string) => {
       })
 
       setData(response.data)
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
     } catch (e: any) {
       throw e.response?.status
     } finally {

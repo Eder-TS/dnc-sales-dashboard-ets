@@ -6,15 +6,12 @@ import eslintConfigPrettier from 'eslint-config-prettier'
 import tseslint from 'typescript-eslint'
 import pluginCypress from 'eslint-plugin-cypress/flat'
 
-// const eslintPluginPrettierRecommended = require('eslint-plugin-prettier/recommended')
-
 export default tseslint.config(
   { ignores: ['dist'] },
   {
     extends: [
       js.configs.recommended,
       ...tseslint.configs.recommended,
-      eslintPluginPrettierRecommended,
       pluginCypress.configs.recommended,
     ],
     files: ['**/*.{ts,tsx}'],

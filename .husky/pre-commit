@@ -8,7 +8,6 @@ npm run format
 echo 'Running Lint...'
 npm run lint
 
-# Testes unitários serão habiliados quando a branch for mergeada.
 # Unit tests
-# echo 'Running unit tests...'
-# npm run test
+echo 'Running unit tests...'
+npm run test
