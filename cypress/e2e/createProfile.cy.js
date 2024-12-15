@@ -8,7 +8,7 @@ describe('Check if create profile page renders the correct component', () => {
     cy.get('input[type="email"]').type('zurrilhotestador@dnc.com')
     cy.get('input[type="tel"]').type('3216546461')
     cy.get('button[type="submit"]').click()
-    cy.get('input[type="password"]').type('zurrilho')
+    cy.get('input[type="password"]').type('zurrilhoTestador@2525')
     // Para economizar recursos no servidor apenas verifico se
     // seria possível criar o usuário.
     cy.get('button[type="submit"]').should('be.visible')

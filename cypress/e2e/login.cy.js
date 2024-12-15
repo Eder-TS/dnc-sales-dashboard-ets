@@ -8,8 +8,13 @@ describe('Login flow correct credentials', () => {
   })
 
   it('should login with valid credentials', () => {
-    cy.get('input[type="email"]').type('zurrilho@dnc.com')
-    cy.get('input[type="password"]').type('zurrilho')
+    cy.get('input[type="email"]').type('tester2525@dnc.com')
+    cy.get('input[type="password"]').type('Tester@2525')
+    cy.get('form').then(($form) => {
+      $form.on('submit', (e) => {
+        e.preventDefault()
+      })
+    })
     cy.get('button[type="submit"]').click()
     cy.url().should('include', '/home')
     cy.get('header').should('be.visible')
@@ -27,7 +32,12 @@ describe('Login flow invalid credentials', () => {
 
   it('should login with invalid credentials', () => {
     cy.get('input[type="email"]').type('invalid@dnc.com')
-    cy.get('input[type="password"]').type('zerozero')
+    cy.get('input[type="password"]').type('Zer0zero@')
+    cy.get('form').then(($form) => {
+      $form.on('submit', (e) => {
+        e.preventDefault()
+      })
+    })
     cy.get('button[type="submit"]').click()
     cy.contains('Email e/ou senha inválidos.').should('be.visible')
   })

@@ -1,6 +1,6 @@
 describe('Check if home page renders the correct component', () => {
   beforeEach(() => {
-    cy.login('zurrilho@dnc.com', 'zurrilho')
+    cy.login('tester2525@dnc.com', 'Tester@2525')
     cy.visit('http://localhost:5173/home')
   })
 

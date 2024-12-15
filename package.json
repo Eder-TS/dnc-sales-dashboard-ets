@@ -2,12 +2,12 @@
   "name": "dnc-sales-dashboard-ets",
   "private": true,
   "version": "0.0.0",
+  "type": "module",
   "scripts": {
     "dev": "vite",
     "build": "tsc -b && vite build",
     "lint": "eslint .",
     "preview": "vite preview",
-    "type": "module",
     "test": "jest --coverage",
     "cypress:open": "cypress open",
     "cypress:run": "cypress run"
@@ -42,7 +42,7 @@
     "@types/react-dom": "^18.3.1",
     "@types/react-router-dom": "^5.3.3",
     "@vitejs/plugin-react": "^4.3.3",
-    "cypress": "^13.16.0",
+    "cypress": "^13.16.1",
     "eslint": "^9.13.0",
     "eslint-config-prettier": "^9.1.0",
     "eslint-plugin-cypress": "^4.1.0",
