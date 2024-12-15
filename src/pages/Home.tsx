@@ -116,7 +116,9 @@ function Home() {
                 >
                   {!highlightsLoading && highlightsData && (
                     <Link to="/leads">
-                      <StyledH2 className="mb-1" id="total-leads">Leads contactados</StyledH2>
+                      <StyledH2 className="mb-1" id="total-leads">
+                        Leads contactados
+                      </StyledH2>
                       <StyledH3 className="mb-1" size={40} lineheight={40}>
                         {highlightsData[2].value}
                       </StyledH3>
@@ -140,7 +142,9 @@ function Home() {
             >
               {!salesMonthLoading && salesMonthData && (
                 <>
-                  <StyledH2 className="mb-1" id="month-sales-chart">Valor de vendas no mês</StyledH2>
+                  <StyledH2 className="mb-1" id="month-sales-chart">
+                    Valor de vendas no mês
+                  </StyledH2>
                   <CustomChart
                     labels={salesMonthData.labels.map((label) => label)}
                     data={salesMonthData.data.map((data) => data)}
@@ -188,7 +192,9 @@ function Home() {
             >
               {!newsLoading && newsData && (
                 <>
-                  <StyledH2 className="mb-1" id="news">Notícias relevantes</StyledH2>
+                  <StyledH2 className="mb-1" id="news">
+                    Notícias relevantes
+                  </StyledH2>
                   <CustomTable
                     headers={['Título', 'Horário']}
                     rows={newsData.map((news) => [
@@ -216,7 +222,9 @@ function Home() {
             >
               {!salesYearLoading && salesYearData && (
                 <>
-                  <StyledH2 className="mb-1" id="year-sales-chart">Valor de vendas por mês</StyledH2>
+                  <StyledH2 className="mb-1" id="year-sales-chart">
+                    Valor de vendas por mês
+                  </StyledH2>
                   <CustomChart
                     labels={salesYearData.labels.map((label) => label)}
                     data={salesYearData.data.map((data) => data)}

@@ -36,6 +36,7 @@ export const usePost = <T, P>(endpoint: string, withAuth?: boolean) => {
       })
 
       setData(response.data)
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
     } catch (e: any) {
       setError(e.response.status ?? 500)
     } finally {
@@ -67,6 +68,7 @@ export const useGet = <T>(endpoint: string, config?: AxiosRequestConfig) => {
       })
 
       setData(response.data)
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
     } catch (e: any) {
       console.log(e)
       setError(e.response.status ?? 500)
@@ -77,6 +79,7 @@ export const useGet = <T>(endpoint: string, config?: AxiosRequestConfig) => {
 
   useEffect(() => {
     getData()
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
 
   return { data, loading, error, getData }
@@ -106,6 +109,7 @@ export const usePut = <T>(endpoint: string) => {
       })
 
       setData(response.data)
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
     } catch (e: any) {
       setError(e.response.status ?? 500)
     } finally {
@@ -136,6 +140,7 @@ export const useDelete = <T>(endpoint: string) => {
       })
 
       setData(response.data)
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
     } catch (e: any) {
       throw e.response?.status
     } finally {

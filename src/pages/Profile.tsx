@@ -57,10 +57,8 @@ function Profile() {
     error: profileUpdateError,
   } = usePut<ProfileEditableData>('profile/update')
 
-  const {
-    deleteData: profileDeleteData,
-    loading: profileDeleteLoading,
-  } = useDelete('profile/delete')
+  const { deleteData: profileDeleteData, loading: profileDeleteLoading } =
+    useDelete('profile/delete')
 
   useEffect(() => {
     if (profileData) {
@@ -82,8 +80,7 @@ function Profile() {
         type: 'error',
       })
     }
-      clearMessage()
-
+    clearMessage()
   }, [profileUpdateData, profileUpdateError])
 
   // FORM
@@ -101,16 +98,22 @@ function Profile() {
     })
   }
   const handleDelete = async () => {
-    if (confirm('Tem certeza que deseja excluir sua conta? Se sim, certifique-se de deletar seus leads antes.') === true){
+    if (
+      confirm(
+        'Tem certeza que deseja excluir sua conta? Se sim, certifique-se de deletar seus leads antes.'
+      ) === true
+    ) {
       try {
         await profileDeleteData()
         alert('Perfil deletado com sucesso!')
         Cookies.remove('Authorization')
         window.location.href = '/'
+        // eslint-disable-next-line @typescript-eslint/no-unused-vars
       } catch (e) {
-        alert('Não foi possível realizar a operação. Entre em contato com nosso suporte.')
+        alert(
+          'Não foi possível realizar a operação. Entre em contato com nosso suporte.'
+        )
       }
-      
     }
   }
 
@@ -146,7 +149,9 @@ function Profile() {
                           className: 'primary',
                           id: 'update-profile',
                           type: 'submit',
-                          children: profileUpdateLoading ? 'Aguarde' : 'Atualizar meu perfil.',
+                          children: profileUpdateLoading
+                            ? 'Aguarde'
+                            : 'Atualizar meu perfil.',
                           disabled: !formValid || profileUpdateLoading,
                           onClick: handleSubmit,
                         },
@@ -155,10 +160,12 @@ function Profile() {
                           id: 'delete-profile',
                           type: 'button',
                           disabled: profileDeleteLoading,
-                          children: profileDeleteLoading ? 'Aguarde...' : 'Excluir minha conta.',
+                          children: profileDeleteLoading
+                            ? 'Aguarde...'
+                            : 'Excluir minha conta.',
                           onClick: handleDelete,
                         },
-                      ]} 
+                      ]}
                       message={updateMessage}
                     />
                   </>

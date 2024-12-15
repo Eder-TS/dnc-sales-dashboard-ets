@@ -28,12 +28,9 @@ function Registration() {
   const dispatch = useDispatch()
   const navigate = useNavigate()
   const { email } = useSelector((state: RootState) => state.createProfile)
-  const { 
-    data,
-    loading,
-    error,
-    postData,
-   } = usePost<string, CreateProfileData>('profile/create')
+  const { data, loading, error, postData } = usePost<string, CreateProfileData>(
+    'profile/create'
+  )
 
   // FORM STEP1
   const step1Inputs: InputProps[] = [
@@ -79,7 +76,9 @@ function Registration() {
       dispatch(setMessage('Usuário criado com sucesso!'))
       navigate('/')
     } else if (error) {
-      alert(`Não foi possível realizar a operação. Entre em contato com nosso suporte (${error}).`)
+      alert(
+        `Não foi possível realizar a operação. Entre em contato com nosso suporte (${error}).`
+      )
     }
   }, [data, error, navigate])
 
@@ -137,7 +136,9 @@ function Registration() {
                   {
                     className: 'primary',
                     type: 'submit',
-                    disabled: email ? !step2FormValid || loading : !step1FormValid,
+                    disabled: email
+                      ? !step2FormValid || loading
+                      : !step1FormValid,
                     onClick: email ? handleStep2 : handleStep1,
                     children: email ? 'Enviar' : 'Próximo',
                   },

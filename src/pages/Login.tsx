@@ -28,7 +28,9 @@ import { RootState } from '@/redux'
 
 function Login() {
   const navigate = useNavigate()
-  const { email, message } = useSelector((state: RootState) => state.createProfile)
+  const { email, message } = useSelector(
+    (state: RootState) => state.createProfile
+  )
 
   const inputs = [
     { type: 'email', placeholder: 'Email' },
@@ -58,7 +60,7 @@ function Login() {
   }
 
   const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault
+    e.preventDefault()
     await postData({
       email: String(formValues[0]),
       password: String(formValues[1]),
