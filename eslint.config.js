@@ -3,6 +3,7 @@ import globals from 'globals'
 import reactHooks from 'eslint-plugin-react-hooks'
 import reactRefresh from 'eslint-plugin-react-refresh'
 import tseslint from 'typescript-eslint'
+import pluginCypress from 'eslint-plugin-cypress/flat'
 
 const eslintPluginPrettierRecommended = require('eslint-plugin-prettier/recommended')
 
@@ -13,6 +14,7 @@ export default tseslint.config(
       js.configs.recommended,
       ...tseslint.configs.recommended,
       eslintPluginPrettierRecommended,
+      pluginCypress.configs.recommended,
     ],
     files: ['**/*.{ts,tsx}'],
     languageOptions: {
@@ -29,6 +31,7 @@ export default tseslint.config(
         'warn',
         { allowConstantExport: true },
       ],
+      'cypress/no-unnecessary-waiting': 'off',
     },
   }
 )
